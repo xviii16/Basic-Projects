@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  color: var(--white);
+  background: #181818;
+  padding: 50px 10px 10px 10px;
+  caret-color: var(--blue);
+  --white: #f8f8f8;
+  --blue: #54a0ff;
+}
+
+#titleBar{
+  background: var(--blue);
+  width: 100%;
+  padding: 0 5px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  user-select: none;
+  font-size: 0.8rem;
+}
+
+#restore{
+  display: none;
+}
+
+::selection {
+  background: var(--blue);
+  color: #ffffff;
+}
+::-moz-selection {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+[contenteditable] {
+  outline: none;
+  border-radius: 0;
+  background: none;
+}
+
+[contenteditable]:focus {
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+}
+
+img{
+  width: 80%;
+  height: auto;
+  margin: 5px 10%;
+}
+
+@media print{
+  @page{
+    size: auto;
+    color: #000;
+  }
+
+  p, h1, h2, h3, h4, h5, h6, li, ul{
+    border: none;
+    color: #000;
+  }
+
+  img{
+    width: 90%;
+    height: auto;
+    margin: 5px 5%;
+  }
+}
